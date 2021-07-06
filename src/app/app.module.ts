@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { PropertyCardcomponent } from './property/property-card.component';
@@ -7,16 +8,14 @@ import { PropertyListComponent } from './property/property-list/property-list.co
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
     PropertyCardcomponent,
     PropertyListComponent,
-      NavBarComponent
-   ],
-  imports: [
-    BrowserModule
+    NavBarComponent,
   ],
+  imports: [BrowserModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
